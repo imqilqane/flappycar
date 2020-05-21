@@ -1,0 +1,200 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Flappycar</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    /* CSS used here will be applied after bootstrap.css */
+
+
+    .pagetitle {border-bottom:1px solid #cccccc; padding-bottom:30px; margin-bottom:30px;}
+  </style>
+</head>
+<body>
+    <div class="row-fluid top30 pagetitle">
+  
+        <div class="container">
+      
+            <div class="row">
+            
+              <div class="col-md-12"><h1><a href="{% url 'index' %}">Flappycar</a></h1></div>
+            
+            
+            </div>
+      
+        </div>
+
+  </div>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-3">
+         
+        <h4 class="">Search</h4>
+        
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+          <div class="input-group-btn">
+            <button class="btn btn-default" style="height: 35PX;" type="submit"><i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default btn-sm btn-block hidden-lg hidden-md" data-toggle="collapse" data-target="#demo">Refine your search <span class="caret"></span>
+          
+        </button>
+        
+        <div id="demo" class="collapse in">
+          <hr>
+          <div class="list-group list-group">
+            <h4 class="">Category</h4>
+            <a href="#" class="list-group-item"><span class="badge">14</span> Active item <span class="label label-primary">New</span></a>
+            <a href="#" class="list-group-item"><span class="badge">3</span> Second item</a>	
+            <a href="#" class="list-group-item"><span class="badge">25</span> Third item</a>
+            <a href="#" class="list-group-item"><span class="badge">14</span> Active item</a>	
+            <a href="#" class="list-group-item"><span class="badge">3</span> Second item</a>
+            <a href="#" class="list-group-item"><span class="badge">25</span> Third item</a> 
+            <a href="#" class="list-group-item"><span class="badge">14</span> Active item</a>
+            <a href="#" class="list-group-item"><span class="badge">3</span> Second item</a>
+            
+            <div id="categories" class="collapse">
+              
+              <a href="#" class="list-group-item"><span class="badge">14</span> Active item</a>
+              <a href="#" class="list-group-item"><span class="badge">3</span> Second item</a>
+              <a href="#" class="list-group-item"><span class="badge">25</span> Third item</a> 
+              <a href="#" class="list-group-item"><span class="badge">14</span> Active item</a>
+              <a href="#" class="list-group-item"><span class="badge">3</span> Second item</a>
+            </div>
+            
+            
+            <button class="btn btn-default btn-sm btn-block" data-toggle="collapse" data-target="#categories">More <span class="caret"></span></button>
+            
+            <hr class="">
+            <h4 class="">Viewing Options</h4>
+            <a href="#" class="list-group-item"><span class="badge">14</span> Upcoming Sessions</a>
+            
+            <a href="#" class="list-group-item"><span class="badge">3</span> OnDemand</a>
+            <hr class="">	
+            <a href="#" class="list-group-item">Archived Courses</a>
+            <a href="#" class="list-group-item">Courses In Development</a>
+          </div>
+        </div>
+        
+        
+        
+        <div class="hidden-sm hidden-xs">
+          
+          <hr>
+          
+          <div class="well">
+            
+            <h4>Premium Membership</h4>
+            <p>Gain unlimited access to our entire course library.</p>
+            <button class="btn btn-sm btn-warning">Learn more</button>
+            
+            <hr>
+            <p class="text-center ">Already a member? <a href="#">Sign in.</a></p>
+          </div>
+          
+          
+          <hr>
+          
+          <div class="well">
+            
+            <h4>Course Catalog</h4>
+            <p><a href="#"><img src="http://placehold.it/400X500" class="img-responsive"></a></p>
+            
+            <p>Everything you need to know about our webinars, including speaker bios, topics, and courses.</p>
+            
+            <button class="btn btn-sm btn-block btn-warning">Download</button>
+          </div>
+          
+          <hr>
+          
+          
+        </div>
+        
+      </div>
+      <div class="col-md-9">
+        
+        
+        <div class="well hidden-xs"> 
+          
+          <div class="row">
+            
+            <div class="col-xs-4">
+              
+              
+              <select class="form-control">
+                <option>Featured</option>
+                <option>Recently Added</option>
+                <option>Next Upcoming Session</option>
+                <option>A-Z</option>
+                <option>Z-A</option>
+              </select>
+            </div>
+            <div class="col-xs-8">
+              <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-th"></span></button>
+                <button type="button" class="btn btn-default active"><span class="glyphicon glyphicon-th-list"></span></button>
+                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list"></span></button>
+                
+              </div>
+            </div>
+            
+          </div>
+          
+          
+        </div>
+        
+        <hr>
+        {% for post in posts_list %}
+        <div class="row">
+          <div class="col-sm-4"><a href="{% url 'details' post.4 %}" class=""><img src="{{post.1}}" class="img-responsive"></a>
+          </div>
+          <div class="col-sm-8">
+            <a href="{% url 'details' post.4%}"><h3 class="title">{{post.0}}</h3></a>
+            <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available form <a href="https://www.ebay.co.uk" target="_blank">{{post.3}}</a></p>
+            <h4>price: {{post.2}}</h4>
+            
+            <p class="text-muted" style="color: blue; font-size: 12px;">{{post.6}}</p>
+            
+          </div>
+        </div>
+        <hr>
+        {% endfor %}
+     
+        
+        
+        
+        <ul class="pagination pagination-lg pull-right">
+          <li><a href="#">«</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">»</a></li>
+        </ul>
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+  

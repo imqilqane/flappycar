@@ -1,0 +1,92 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Flappycar</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link href="{% static 'cheapcarsensearchengine/css/det.css' %}" rel="stylesheet"/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+  <style>
+    /* CSS used here will be applied after bootstrap.css */
+
+
+    .pagetitle {border-bottom:1px solid #cccccc; padding-bottom:30px; margin-bottom:30px;}
+  </style>
+</head>
+<body>
+    <div class="row-fluid top30 pagetitle">
+  
+        <div class="container">
+      
+            <div class="row">
+            
+              <div class="col-md-12"><h1><a href="{% url 'index' %}">Flappycar</a></h1></div>
+            
+            
+            </div>
+      
+        </div>
+
+  </div>
+  <section>
+    <div class="container">
+       </div class="row">  
+        <div class="col-md-10 ">
+            <section class="panel">
+                  <div class="panel-body">
+                      <div class="col-md-6">
+                          <div class="pro-img-details">
+                              <img src="{{post_ellemnts_tupel.4}}" alt="">
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <h4 class="pro-d-title" style="width: 100%; font-size: 18px;">
+                              
+                                {{post_ellemnts_tupel.3 }}
+                              
+                          </h4>
+                          <div class="product_meta" style="font-size: 14px;">
+                            <span class="posted_in"> <strong>Categories:</strong> {{post_ellemnts_tupel.0}}.</span>
+                        </div>
+
+                          
+                        <div class="m-bot15" style="font-size: 25px; margin-top: 38%;" > <strong >Price : </strong> <span class="pro-price"> {{post_ellemnts_tupel.5}}</span></div>
+                    
+                        <p>
+                            <a href='{{post_ellemnts_tupel.8}}' target="_blank" class="mt-4 btn btn-round btn-danger" type="button" style="height: 35px; width: 135px; font-size:  18px;"><i class="fa fa-shopping-cart"></i> Visit dealer</a>
+                        </p>
+        </div>
+    </div>
+    </section>
+        </div>
+        <div class="col-md-10 ">
+            <section class="panel">
+                  <div class="panel-body">
+                      <div class="col-md" style=" font-size: 13px;">
+                        <iframe src="{{post_ellemnts_tupel.1}}"  style=" overflow: hidden; width: 100%;" class="" height="500"   ></iframe>
+
+                
+                      </div>
+                     
+    </div>
+    </section>
+        </div>
+      </div> 
+    </div>
+  </section>    
+</body>
+</html>
+      
